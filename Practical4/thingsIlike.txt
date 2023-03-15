@@ -1,0 +1,22 @@
+I like basketball
+I like badminton
+I like soccer
+I like football
+<<<<<<< HEAD
+I like running
+I like hamburgers
+I like movies 
+I like games
+I like ZJE very much
+I like BMI
+I like cats
+=======
+I don't like movies 
+I like games
+I like ZJE
+I like BMI
+I like Christiano
+I like kigdom of luoke
+I like biology 
+I like math
+>>>>>>> Zihang
