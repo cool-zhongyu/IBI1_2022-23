@@ -1,0 +1,5 @@
+What proportion of cases have died (as of the latest information) in Germany?
+What proportion of cases have died in the UK?
+line 25
+I think the answers are correct. 
+But I am quite surprised the proportion in Germany was much lower than in UK.  
