@@ -16,11 +16,13 @@ b=new_data.iloc[:,2]
 print(np.mean(b))
 # boxpolt
 plt.boxplot([new_data.iloc[:,1],new_data.iloc[:,2]],labels=['new_cases','new_deaths'])
+plt.show()
 # plot the worldwide over time and the title
 plt.plot(covid_data.date,covid_data.new_cases,'b+')
 plt.title('world date new cases')
 plt.plot(covid_data.date,covid_data.new_deaths,'b+')
 plt.title('world date new deaths')
+plt.show()
 # the answers for the question
 x=covid_data.loc[covid_data.location=="Germany","total_cases"]
 y=covid_data.loc[covid_data.location=="Germany","total_deaths"]
