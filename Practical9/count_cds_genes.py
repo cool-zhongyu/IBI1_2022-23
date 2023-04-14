@@ -6,13 +6,12 @@ if con=='TGA':
     for line in xfile:
         if line.startswith('>'):
             name = ''.join(line.split()[0:1])
-            dict[name] = ''
+            dict[name] = '\n'
         else:
             dict[name] += line.replace('\n', '')
     for key in list(dict.keys()):
         if not dict[key].endswith('TGA'):
             del dict[key]
-            continue
     for key in list(dict.keys()):
         seq = dict[key]
         start = seq.count('ATG')
@@ -26,20 +25,21 @@ if con=='TGA':
             key_new=key+'     The coding sequence is: '+str(num1)
             dict[key_new]=dict[key]+str(num1)
             del dict[key]
-    print(dict,file=output)
+    for key in dict:
+        dict[key]=dict[key].strip('')
+        print(key,dict[key],file=output)
     output.close()
 elif con=='TAA':
     output = open('TAA_gene.fa', 'w')
     for line in xfile:
         if line.startswith('>'):
             name = ''.join(line.split()[0:1])
-            dict[name] = ''
+            dict[name] = '\n'
         else:
             dict[name] += line.replace('\n', '')
     for key in list(dict.keys()):
         if not dict[key].endswith('TAA'):
             del dict[key]
-            continue
     for key in list(dict.keys()):
         seq=dict[key]
         start=seq.count('ATG')
@@ -53,14 +53,16 @@ elif con=='TAA':
             key_new=key+'     The coding sequence is: '+str(num2)
             dict[key_new]=dict[key]
             del dict[key]
-    print(dict, file=output)
+    for key in dict:
+        dict[key]=dict[key].strip('')
+        print(key,dict[key], file=output)
     output.close()
 elif con=='TAG':
     output = open('TAG_gene.fa', 'w')
     for line in xfile:
         if line.startswith('>'):
             name = ''.join(line.split()[0:1])
-            dict[name] = ''
+            dict[name] = '\n'
         else:
             dict[name] += line.replace('\n', '')
     for key in list(dict.keys()):
@@ -80,7 +82,11 @@ elif con=='TAG':
             key_new=key+'     The coding sequence is: '+str(num3)
             dict[key_new]=dict[key]
             del dict[key]
-    print(dict, file=output)
+    for key in dict:
+        dict[key]=dict[key].strip('')
+        print(key,dict[key], file=output)
     output.close()
 else:
     print('The codon is not one of three codons.')
+
+

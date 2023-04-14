@@ -4,12 +4,14 @@ dict={}
 for line in xfile:
     if line.startswith('>'):
         name=''.join(line.split()[0:1])
-        dict[name]=''
+        dict[name]='\n'
     else:
         dict[name] += line.replace('\n','')
 for key in list(dict.keys()):
     if not dict[key].endswith('TGA'):
         del dict[key]
-        continue
-print(dict,file=output)
+for key in dict:
+    dict[key]=dict[key].strip('')
+    print(key, dict[key],file=output)
 output.close()
+
