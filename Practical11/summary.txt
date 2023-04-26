@@ -1,0 +1,12 @@
+ACE2 human and ACE2 mouse
+The alignment score: 3579    The percentage of identical amino acids:82.1%
+ACE2 mouse and ACE2 cat:
+The alignment score: 3592    The percentage of identical amino acid: 81.7%
+ACE2 cat and ACE2 human
+The alignment score: 3717    The percentage of identical amino acid: 85.2%
+
+
+The interpretation
+The sequences of cats and mice are most closely related. The percentages of
+identical amino acid in three pairs are over 80%. Therefore, the ACE2 protein in three
+species might be similar in structure and function. 
